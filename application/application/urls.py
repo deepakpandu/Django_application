@@ -21,5 +21,7 @@ from app_1 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('members/', views.members, name='members'),
-    path('first/', views.first, name='first' )
+    path('first/', views.first, name='first' ),
+    path('all_data/', views.All_data, name='all_data'),
+    path('details/<int:id>', views.details, name='details'),
 ]
