@@ -24,4 +24,7 @@ urlpatterns = [
     path('first/', views.first, name='first' ),
     path('all_data/', views.All_data, name='all_data'),
     path('details/<int:id>', views.details, name='details'),
+    path('main/', views.main, name='main'),
+    path('main/all_data/', views.All_data, name='main'),
+    
 ]
