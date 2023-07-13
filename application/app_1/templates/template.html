@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+
+{% block title %}
+  all_in_one
+{% endblock %}
+    {% block content %}
+           {% for x in all_in_one %}
+            <h1>{{ x }}</h1>
+    {% endfor %}
+
+
+{%endblock%}

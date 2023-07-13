@@ -31,3 +31,11 @@ def details(request, id):
 def main(request):
   template = loader.get_template('main.html')
   return HttpResponse(template.render())
+
+
+def All_in_one(request):
+  template = loader.get_template('template.html')
+  context = {
+    'all_in_one': ['Deepak', 'Raj', 'shubham'],   
+  }
+  return HttpResponse(template.render(context, request))

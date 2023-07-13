@@ -26,5 +26,7 @@ urlpatterns = [
     path('details/<int:id>', views.details, name='details'),
     path('main/', views.main, name='main'),
     path('main/all_data/', views.All_data, name='main'),
+    path('all_in_one/', views.All_in_one, name='All_in_one'),
+    path('admin/' ,admin.site.urls),  
     
 ]
