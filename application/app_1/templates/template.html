@@ -1,12 +1,23 @@
 {% extends "master.html" %}
-
+{% load static %}
 {% block title %}
   all_in_one
 {% endblock %}
     {% block content %}
-           {% for x in all_in_one %}
-            <h1>{{ x }}</h1>
-    {% endfor %}
+           <!-- {% for x in all_in_one %}
 
+      <li     
+      {% if forloop.revcountero %}
+        style='background-color:lightblue;'
+      {% endif %}>
+            <h1>{{ x }}</h1></li>
+    {% endfor %}
+     -->
+     <link rel="stylesheet" href="{% static 'my_first.css' %}">  
+     <h1>Hello</h1>
+
+<p>This page contains a footer in a template.</p>
+
+{% include 'my_menu.html' %} 
 
 {%endblock%}

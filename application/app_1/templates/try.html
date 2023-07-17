@@ -1,11 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
     <h1>THIS IS MY FIRST PAGE</h1>
-</body>
-</html>
+    <link rel="stylesheet" href="{% static 'my_first.css' %}"> 
+   
+    <!-- <h1>Hello {{mymembers.firstname}}, how are you?</h1>
+
+
+    {% with firstname="Tobias" %}
+<h1>Hello {{ firstname }}, how are you?</h1>
+{% endwith %} -->
+
+<ul>
+    {% for x in mymembers %}
+      <li>{{ x.firstname }}</li>
+    {% endfor %}
+  </ul>
+  
+ {% endblock %}
+
+

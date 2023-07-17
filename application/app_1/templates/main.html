@@ -1,11 +1,12 @@
 {% extends "master.html" %}
-
+{% load static %}
 {% block title %}
   My Tennis Club
 {% endblock %}
 
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'my_first.css' %}"> 
   <h1>My Tennis Club</h1>
 
   <h3>Members</h3>

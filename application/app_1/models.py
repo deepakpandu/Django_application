@@ -7,3 +7,7 @@ class tech(models.Model):
   lastname = models.CharField(max_length=255)
   phone = models.IntegerField(null=True)
   address = models.CharField(null=True, max_length=255)
+
+
+def __str__(self):
+    return f"{self.firstname} {self.lastname}"

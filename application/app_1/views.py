@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from app_1.models import tech
 
@@ -8,8 +8,12 @@ def members(request):
     return HttpResponse("Hello world!")
 
 def first(request):
+  mymembers = tech.objects.all()[0]
   template = loader.get_template('try.html')
-  return HttpResponse(template.render())
+  context = {
+    'mymembers': mymembers,
+  }
+  return HttpResponse(template.render(context, request))
 
 def All_data(request):
   mymembers = tech.objects.all().values()
@@ -35,7 +39,39 @@ def main(request):
 
 def All_in_one(request):
   template = loader.get_template('template.html')
+#   context = {
+#     'all_in_one': ['Deepak', 'Raj', 'shubham'],   
+#   }
+  return HttpResponse(template.render())
+
+
+
+
+def testing(request):
+  mymembers = tech.objects.all().values()
+  template = loader.get_template('try.html')
+  context = {
+    'mymembers': mymembers,
+  }
+  return HttpResponse(template.render(context, request))
+
+
+def testing_1(request):
+  template = loader.get_template('try_1.html')
+  context = {
+    'x': ['Apple', 'Banana', 'Cherry'], 
+    'y': ['Apple', 'Banana', 'Cherry'], 
+  }
+  return HttpResponse(template.render(context, request))
+
+def Footer(request):
+  template = loader.get_template('footer.html')
+  return HttpResponse(template.render())
+
+def All_in_one_1(request):
+  template = loader.get_template('try_with.html')
   context = {
     'all_in_one': ['Deepak', 'Raj', 'shubham'],   
   }
   return HttpResponse(template.render(context, request))
+

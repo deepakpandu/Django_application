@@ -21,12 +21,14 @@ from app_1 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('members/', views.members, name='members'),
-    path('first/', views.first, name='first' ),
+    path('first/', views.testing, name='first' ),
     path('all_data/', views.All_data, name='all_data'),
     path('details/<int:id>', views.details, name='details'),
     path('main/', views.main, name='main'),
     path('main/all_data/', views.All_data, name='main'),
     path('all_in_one/', views.All_in_one, name='All_in_one'),
-    path('admin/' ,admin.site.urls),  
+    path('try_1/', views.testing_1, name='try_1'), 
+    path('all_in_one_1/', views.All_in_one_1, name='all_in_one_1')
+    
     
 ]
